@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsubscribe from Our Mailing List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #ff6f61;
+            color: #ffffff;
+            padding: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .body {
+            padding: 20px;
+            color: #333333;
+        }
+
+        .footer {
+            background-color: #f4f4f4;
+            color: #777777;
+            padding: 20px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e55a4f;
+        }
+
+        .button:focus {
+            outline: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>We're Sorry to See You Go</h1>
+        </div>
+        <div class="body">
+            <div id="unsubscribe-form">
+                <p>Dear User,</p>
+                <p>We're sad to see you leave. If you unsubscribe, you will no longer receive updates from us about our
+                    latest offers and news.</p>
+                <p>Are you sure you want to unsubscribe?</p>
+                <form action="https://example.com/unsubscribe" method="POST" onsubmit="showGoodbyeMessage(event)">
+                    <input type="hidden" name="email" value="[user_email]">
+                    <button type="submit" class="button">Yes, Unsubscribe Me</button>
+                </form>
+            </div>
+            <div id="goodbye-message" class="hidden">
+                <p>Thank you for being with us. You have successfully unsubscribed from our mailing list.</p>
+                <p>We hope to see you again!</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>If this was a mistake, you can ignore this page and we'll keep you on our mailing list.</p>
+            <p>&copy; 2024 SquareInc. All rights reserved.</p>
+            <p><a href="https://example.com/privacy-policy">Privacy Policy</a> | <a
+                    href="https://example.com/contact">Contact Us</a></p>
+        </div>
+    </div>
+    <script>
+        function showGoodbyeMessage(event) {
+            event.preventDefault();
+            document.getElementById('unsubscribe-form').classList.add('hidden');
+            document.getElementById('goodbye-message').classList.remove('hidden');
+            // Uncomment the line below to enable actual form submission
+            // event.target.submit();
+        }
+    </script>
+</body>
+
+</html>
